@@ -2,10 +2,9 @@ import styles from "./page.module.css";
 import Header from "@/components/header"
 import HeroBanner from "@/components/heroBanner";
 import Categories from "@/components/categories";
+import BooksSection from "@/components/booksSection";
 import SubscriptionSection from "@/components/subscriptionSection";
 import Footer from "@/components/footer";
-import BooksSection from "@/components/booksSection";
-
 
 export default function Home() {
   // Dados que seriam obtidos de uma API
@@ -154,77 +153,29 @@ export default function Home() {
 
       {/* FEATURED BOOKS SECTION */}
       <BooksSection books={featuredBooks}
-      renderStars={renderStars}
-      text={"Ver todos"}
-      title={"Destaques da semana"}
-      viewAllLink={"/destaques"}
-      /> 
+        renderStars={renderStars}
+        text={"Ver todos"}
+        title={"Destaques da semana"}
+        viewAllLink={"/destaques"}
+      />
 
       {/* CATEGORIES SECTION */}
       <Categories categories={categories} />
 
       {/* NEW RELEASES SECTION */}
       <BooksSection books={newReleases}
-      renderStars={renderStars}
-      text={"Ver todos"}
-      title={"Lançamentos"}
-      viewAllLink={"/lancamentos"}
-      /> 
+        renderStars={renderStars}
+        text={"Ver todos"}
+        title={"Lançamentos"}
+        viewAllLink={"/lancamentos"}
+      />
 
       {/* SUBSCRIPTION SECTION */}
       <SubscriptionSection />
 
-      {/* SHOPPING CART */}
-      <div className={styles.shoppingCart}>
-        <div className={styles.cartHeader}>
-          <h3 className={styles.cartHeaderTitle}>Seu Carrinho</h3>
-          <button className={styles.closeButton}>✕</button>
-        </div>
-
-        <div className={styles.cartItems}>
-          {cartItems.length > 0 ? (
-            cartItems.map((item) => (
-              <div key={item.id} className={styles.cartItem}>
-                <div className={styles.itemInfo}>
-                  <h4 className={styles.itemTitle}>{item.title}</h4>
-                  <div className={styles.itemDetails}>
-                    <span className={styles.itemQuantity}>
-                      Qtd: {item.quantity}
-                    </span>
-                    <span className={styles.itemPrice}>
-                      R$ {item.price.toFixed(2)}
-                    </span>
-                  </div>
-                </div>
-                <button className={styles.removeButton}>✕</button>
-              </div>
-            ))
-          ) : (
-            <p className={styles.emptyCartMessage}>Seu carrinho está vazio</p>
-          )}
-        </div>
-
-        {cartItems.length > 0 && (
-          <div className={styles.cartFooter}>
-            <div className={styles.cartTotal}>
-              <span className={styles.totalLabel}>Total:</span>
-              <span className={styles.totalValue}>
-                R$ {calculateTotal().toFixed(2)}
-              </span>
-            </div>
-            <button className={styles.checkoutButton}>Finalizar Compra</button>
-          </div>
-        )}
-      </div>
-
       {/* FOOTER */}
-      <Footer/>
+      <Footer />
 
-      {/* OVERLAY */}
-      <div className={styles.overlay}></div>
-
-      {/* SCROLL TO TOP BUTTON */}
-      <button className={styles.scrollTop}>↑</button>
     </div>
   );
 }

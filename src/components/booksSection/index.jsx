@@ -3,18 +3,18 @@ import SectionHeader from "../sectionHeader"
 import BooksCard from "../bookCard"
 
 const BooksSection = ({ books, renderStars, text, title, viewAllLink }) => {
-    return (
-        <section className={styles.bookSection}>
+  return (
+    <section className={styles.bookSection}>
 
-          <SectionHeader text={text} title={title} viewAllLink={viewAllLink} />
+      <SectionHeader text={text} title={title} viewAllLink={viewAllLink} />
 
-        <div className={styles.booksGrid}>
-          {books.map((book) => (
-            <BooksCard key={book.id} book={book} renderStars={renderStars} />
-          ))}
-        </div>
-      </section>
-    )
+      <div className={styles.booksGrid}>
+        {books.map((book) => (
+          <BooksCard key={book.id} book={book} renderStars={renderStars} />
+        ))}
+      </div>
+    </section>
+  )
 }
 
 export default BooksSection
