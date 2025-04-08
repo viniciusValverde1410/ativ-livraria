@@ -1,4 +1,4 @@
-import styles from "./heroSection.module.css"
+import styles from "./heroBanner.module.css"
 
 const HeroSection = () => {
     return (
