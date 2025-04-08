@@ -1,0 +1,25 @@
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sectionHeading {
+    font-size: 1.8rem;
+    color: var(--primary-dark);
+    margin: 0;
+    font-family: inherit;
+  }
+  
+  .viewAll {
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: var(--transition);
+    text-decoration: none;
+  }
+  
+  .viewAll:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+  }

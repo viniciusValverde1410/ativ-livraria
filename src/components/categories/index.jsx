@@ -1,14 +1,11 @@
 import styles from "./categories.module.css"
+import SectionHeader from "../sectionHeader"
 
 const Categories = ({categories}) => {
     return (
         <section className={styles.categoriesSection}>
-        <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionHeading}>Categorias Populares</h2>
-          <a href="/categorias" className={styles.viewAll}>
-            Ver todas
-          </a>
-        </div>
+
+        <SectionHeader text={"Ver todas"} title={"Categorias Populares"} viewAllLink={"/categorias"} />
 
         <div className={styles.categoriesGrid}>
           {categories.map((category) => (

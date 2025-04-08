@@ -3,6 +3,7 @@ import Header from "@/components/header"
 import HeroBanner from "@/components/heroBanner";
 import Categories from "@/components/categories"
 import Footer from "@/components/footer"
+import NewReleases from "@/components/newReleases";
 
 export default function Home() {
   // Dados que seriam obtidos de uma API
