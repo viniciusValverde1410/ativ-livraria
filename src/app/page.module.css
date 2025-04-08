@@ -247,68 +247,6 @@
 }
 
 /* SUBSCRIPTION SECTION STYLES */
-.subscriptionSection {
-  background: linear-gradient(
-    135deg,
-    var(--primary-light),
-    var(--primary-color)
-  );
-  color: var(--white);
-  padding: 4rem 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  box-sizing: border-box;
-}
-
-.subscriptionContent {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.subscriptionHeading {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-family: inherit;
-}
-
-.subscriptionText {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
-
-.subscriptionForm {
-  display: flex;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.subscriptionInput {
-  flex: 1;
-  padding: 0.75rem 1rem;
-  border: none;
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
-  font-size: 1rem;
-  outline: none;
-  font-family: inherit;
-}
-
-.subscribeButton {
-  background-color: var(--secondary-color);
-  color: var(--primary-dark);
-  padding: 0.75rem 1.5rem;
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
-  font-weight: bold;
-  transition: var(--transition);
-  cursor: pointer;
-  border: none;
-  outline: none;
-  font-family: inherit;
-}
-
-.subscribeButton:hover {
-  background-color: #02c4b2;
-}
 
 /* SHOPPING CART STYLES */
 .shoppingCart {
