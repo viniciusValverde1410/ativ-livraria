@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
-import Header from "../components/header"
+import Header from "@/components/header"
+import HeroSection from "@/components/heroSection";
 
 export default function Home() {
   // Dados que seriam obtidos de uma API
@@ -141,20 +142,10 @@ export default function Home() {
   return (
     <div className={styles.bookstoreContainer}>
       {/* HEADER */}
-<Header cartItems={cartItems}/>
+      <Header cartItems={cartItems} />
 
       {/* HERO BANNER */}
-      <section className={styles.heroBanner}>
-        <div className={styles.heroContent}>
-          <h2 className={styles.heroHeading}>
-            Descubra mundos extraordinários
-          </h2>
-          <p className={styles.heroParagraph}>
-            Promoção de lançamentos com até 30% de desconto!
-          </p>
-          <button className={styles.ctaButton}>Ver ofertas</button>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* FEATURED BOOKS SECTION */}
       <section className={styles.bookSection}>
